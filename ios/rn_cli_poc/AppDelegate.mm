@@ -5,6 +5,8 @@
 //#import "PlistModule.h"
 #import "React/RCTBridge.h"
 #import "React/RCTRootView.h"
+#import "rn_cli_poc-Bridging-Header.h"
+
 
 @implementation AppDelegate
 

@@ -1,7 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Button, NativeModules, Text, View} from 'react-native';
 import Config from 'react-native-config';
+
 const EnvVariables = () => {
   return (
     <View
@@ -12,6 +13,10 @@ const EnvVariables = () => {
         padding: 20,
         gap: 5,
       }}>
+      <Button
+        title="Print Plist Values"
+        onPress={() => NativeModules.PlistModule?.printPlistValues()}
+      />
       <Text
         style={{
           backgroundColor: '#c1c1c1',

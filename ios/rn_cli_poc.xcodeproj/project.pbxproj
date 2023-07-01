@@ -14,6 +14,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		52600D462A509ADB00AF39D8 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 52600D452A509ADB00AF39D8 /* Config.xcconfig */; };
 		52600D482A50C49200AF39D8 /* PlistModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52600D472A50C49200AF39D8 /* PlistModule.swift */; };
+		52600D4D2A50D89F00AF39D8 /* PlistModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 52600D4C2A50D89F00AF39D8 /* PlistModule.m */; };
 		52C66CBC2A4F648F009FE645 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C66CBB2A4F648F009FE645 /* Counter.swift */; };
 		52C66CC02A4F678F009FE645 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C66CBF2A4F678F009FE645 /* Counter.m */; };
 		7699B88040F8A987B510C191 /* libPods-rn_cli_poc-rn_cli_pocTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-rn_cli_poc-rn_cli_pocTests.a */; };
@@ -44,6 +45,7 @@
 		3B4392A12AC88292D35C810B /* Pods-rn_cli_poc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_cli_poc.debug.xcconfig"; path = "Target Support Files/Pods-rn_cli_poc/Pods-rn_cli_poc.debug.xcconfig"; sourceTree = "<group>"; };
 		52600D452A509ADB00AF39D8 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		52600D472A50C49200AF39D8 /* PlistModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistModule.swift; sourceTree = "<group>"; };
+		52600D4C2A50D89F00AF39D8 /* PlistModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlistModule.m; sourceTree = "<group>"; };
 		52C66CBA2A4F648E009FE645 /* rn_cli_poc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rn_cli_poc-Bridging-Header.h"; sourceTree = "<group>"; };
 		52C66CBB2A4F648F009FE645 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		52C66CBF2A4F678F009FE645 /* Counter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				52C66CBA2A4F648E009FE645 /* rn_cli_poc-Bridging-Header.h */,
 				52C66CBF2A4F678F009FE645 /* Counter.m */,
 				52600D472A50C49200AF39D8 /* PlistModule.swift */,
+				52600D4C2A50D89F00AF39D8 /* PlistModule.m */,
 			);
 			name = rn_cli_poc;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 			files = (
 				52C66CC02A4F678F009FE645 /* Counter.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				52600D4D2A50D89F00AF39D8 /* PlistModule.m in Sources */,
 				52600D482A50C49200AF39D8 /* PlistModule.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				52C66CBC2A4F648F009FE645 /* Counter.swift in Sources */,

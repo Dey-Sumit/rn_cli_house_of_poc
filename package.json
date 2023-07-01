@@ -8,7 +8,9 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "ios:production": "rm -rf ios/Build && npx react-native run-ios --scheme \"Production rn_cli_poc\"",
+    "ios:staging": "rm -rf ios/Build && npx react-native run-ios --scheme \"Staging rn_cli_poc\""
   },
   "dependencies": {
     "deprecated-react-native-prop-types": "^4.1.0",

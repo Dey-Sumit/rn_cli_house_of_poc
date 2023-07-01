@@ -39,6 +39,8 @@
 	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>NATIVE_SOME_RANDOM_KEY</key>
+	<string>$(NATIVE_SOME_RANDOM_KEY)</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

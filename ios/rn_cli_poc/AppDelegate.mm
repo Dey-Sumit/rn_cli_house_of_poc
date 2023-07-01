@@ -2,6 +2,10 @@
 
 #import <React/RCTBundleURLProvider.h>
 
+//#import "PlistModule.h"
+#import "React/RCTBridge.h"
+#import "React/RCTRootView.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -10,6 +14,16 @@
   // You can add your custom initial props in the dictionary below.
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
+  
+  // Get the path to the plist file
+  NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
+    
+  // Read the contents of the plist file into a dictionary
+  NSDictionary *plistDict = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    
+  // Print the plist values
+  NSLog(@"Plist Values: %@", plistDict);
+
 
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }

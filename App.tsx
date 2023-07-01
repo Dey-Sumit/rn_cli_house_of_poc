@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -9,7 +10,7 @@ import React from 'react';
 import {SafeAreaView, StatusBar, View, useColorScheme} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import SwiftNativeModule from './components/2-SwiftNativeModule';
+import EnvVariables from './components/2-EnvVariables';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -28,10 +29,9 @@ function App(): JSX.Element {
       <View
         style={{
           flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
         }}>
-        <SwiftNativeModule />
+        <EnvVariables />
+        {/* <SwiftNativeModule /> */}
       </View>
       {/* <QrCodeScanner /> */}
     </SafeAreaView>

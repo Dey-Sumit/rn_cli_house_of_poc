@@ -12,6 +12,8 @@ import Config from 'react-native-config';
 const {PlistModule} = NativeModules;
 
 const EnvVariables = () => {
+  console.log('Config', Config);
+
   return (
     <ScrollView
       contentContainerStyle={{

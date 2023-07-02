@@ -1,19 +1,31 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Button, NativeModules, StyleSheet, Text, View} from 'react-native';
+import {
+  Button,
+  NativeModules,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import Config from 'react-native-config';
 const {PlistModule} = NativeModules;
 
 const EnvVariables = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'center',
+    <ScrollView
+      contentContainerStyle={{
         padding: 20,
         gap: 5,
+      }}
+      style={{
+        flex: 1,
       }}>
-      <View>
+      <View
+        style={{
+          rowGap: 8,
+          marginBottom: 20,
+        }}>
         <Button
           color="green"
           title="Print Plist Values on Native Console"
@@ -37,7 +49,7 @@ const EnvVariables = () => {
       })}
 
       {/* <SwiftNativeModule /> */}
-    </View>
+    </ScrollView>
   );
 };
 
@@ -49,7 +61,7 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 10,
     width: '100%',
-    marginBottom: 10,
+    marginBottom: 2,
     textAlign: 'center',
   },
   paragraph: {

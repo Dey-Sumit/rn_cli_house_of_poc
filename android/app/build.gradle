@@ -1,6 +1,18 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
 
+
+
+// required for react-native-config
+project.ext.envConfigFiles = [
+    staging: ".env.staging",
+    production: ".env.production",
+]
+
+// required for react-native-config
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -78,10 +90,30 @@ android {
         applicationId "com.rn_cli_poc"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
         missingDimensionStrategy 'react-native-camera', 'general'
     }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        staging {
+            applicationId "com.rn_cli_poc.staging"
+            minSdkVersion rootProject.ext.minSdkVersion
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            versionCode 174
+            versionName "4.4.422"
+            resValue "string", "build_config_package", "com.rn_cli_poc"
+        }
+        production {
+            applicationId "com.rn_cli_poc"
+            minSdkVersion rootProject.ext.minSdkVersion
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            versionCode 6
+            versionName "2.1.0"
+            resValue "string", "build_config_package", "com.rn_cli_poc"
+        }
+    }
+
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
@@ -91,6 +123,7 @@ android {
         }
     }
     buildTypes {
+
         debug {
             signingConfig signingConfigs.debug
         }

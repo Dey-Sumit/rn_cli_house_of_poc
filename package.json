@@ -10,7 +10,13 @@
     "test": "jest",
     "postinstall": "patch-package",
     "ios:production": "rm -rf ios/Build && npx react-native run-ios --scheme \"Production rn_cli_poc\"",
-    "ios:staging": "rm -rf ios/Build && npx react-native run-ios --scheme \"Staging rn_cli_poc\""
+    "ios:staging": "rm -rf ios/Build && npx react-native run-ios --scheme \"Staging rn_cli_poc\"",
+    "android:staging": "react-native run-android --variant=stagingDebug",
+    "build:android-staging-apk": "cd android && ./gradlew assembleStagingRelease",
+    "build:android-staging-bundle": "cd android && ./gradlew bundleStagingRelease",
+    "android:production": "react-native run-android --variant=productionDebug",
+    "build:android-production-apk": "cd android && ./gradlew assembleProductionRelease",
+    "build:android-production-bundle": "cd android && ./gradlew bundleProductionRelease"
   },
   "dependencies": {
     "deprecated-react-native-prop-types": "^4.1.0",

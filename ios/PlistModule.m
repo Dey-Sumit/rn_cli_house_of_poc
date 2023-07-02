@@ -13,5 +13,6 @@
 @interface RCT_EXTERN_MODULE(PlistModule, NSObject)
 
 RCT_EXTERN_METHOD(printPlistValues)
+RCT_EXTERN_METHOD(getPlistValues: (RCTResponseSenderBlock)callback)
 
 @end

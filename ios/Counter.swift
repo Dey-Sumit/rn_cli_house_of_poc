@@ -15,7 +15,7 @@ class Counter: NSObject{
   @objc
   func increment(_ callback:RCTResponseSenderBlock){
     count += 1;
-    print("count=>",count);
+//    print("count=>",count);
     callback([count])
     
   }
